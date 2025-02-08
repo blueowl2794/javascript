@@ -69,3 +69,50 @@ function asAmirror(str) {
   }
   return arr.join(" ")
 } 
+
+function capicua(numero){
+  //Escribe una función, la cual recibe un número y determina si es o no capicúa.
+  //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
+  //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
+  //Escribe tu código aquí
+  let str = numero.toString()
+  let string = str.split("").reverse().join("")
+  
+  if (str === string) {
+    return "Es capicua"
+  }else{
+    return "No es capicua"
+  }
+  
+}
+
+function deleteAbc(cadena){
+  //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
+  //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
+  //Escribe tu código aquí
+  let arr = []
+  for (let i = 0; i < cadena.length; i++) {
+    const element = cadena[i];
+    if (element !== "a" && element !== "b" && element !== "c") {
+      arr.push(element)
+    }
+  }
+  return  arr.join("")
+}
+
+function sortArray(arr) {
+  //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
+  //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
+  //Escribe tu código aquí
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i].length > arr[j].length) {
+        // Intercambiar elementos
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
+}
