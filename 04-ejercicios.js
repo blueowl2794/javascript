@@ -54,6 +54,7 @@ function numberOfCharacters(string) {
   
 }
 
+
 function asAmirror(str) {
   //La función recibe una frase. 
   //Escribe una función que tome la frase recibida y la devuelva de modo tal que se pueda leer de izquierda a derecha 
@@ -69,6 +70,7 @@ function asAmirror(str) {
   }
   return arr.join(" ")
 } 
+
 
 function capicua(numero){
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
@@ -86,6 +88,7 @@ function capicua(numero){
   
 }
 
+
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
@@ -99,6 +102,7 @@ function deleteAbc(cadena){
   }
   return  arr.join("")
 }
+
 
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
@@ -115,4 +119,23 @@ function sortArray(arr) {
     }
   }
   return arr;
+}
+
+
+function buscoInterseccion(arreglo1, arreglo2){
+  //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
+  //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
+  //Si no tienen elementos en común, retornar un arreglo vacío.
+  //Aclaración: los arreglos no necesariamente tienen la misma longitud
+  //Escribe tu código aquí  
+  let arr = []
+  for (let i = 0; i < arreglo1.length; i++) {
+    const element = arreglo1[i];
+    if (arreglo2.includes(element) ){
+      arr.push(element)
+    }
+    
+  }
+  return arr
+
 }
