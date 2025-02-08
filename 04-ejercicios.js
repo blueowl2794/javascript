@@ -53,3 +53,19 @@ function numberOfCharacters(string) {
     return obj
   
 }
+
+function asAmirror(str) {
+  //La función recibe una frase. 
+  //Escribe una función que tome la frase recibida y la devuelva de modo tal que se pueda leer de izquierda a derecha 
+  //pero con cada una de sus palabras invertidas, como si fuera un espejo.
+  //Ej: Recibe ---> "Eolartem! xd xd " || Devuelve ---> "!metraloE dx dx"
+  //Escribe tu código aquí
+
+  let string = str.split(" ")
+  let arr = []
+  for (let j = 0; j < string.length; j++) {
+    arr.push(string[j].split("").reverse().join(""))
+
+  }
+  return arr.join(" ")
+} 
